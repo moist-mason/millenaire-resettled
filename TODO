@@ -1,0 +1,3 @@
+Known issues
+- Plaster walls don't connect (??)
+- AABB for Dirt slabs is correct but a new model is needed.

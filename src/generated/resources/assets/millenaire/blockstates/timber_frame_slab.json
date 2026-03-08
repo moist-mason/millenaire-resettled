@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "millenaire:block/timber_frame_slab"
+    },
+    "type=double": {
+      "model": "millenaire:block/plain_timber_frame"
+    },
+    "type=top": {
+      "model": "millenaire:block/timber_frame_slab_top"
+    }
+  }
+}

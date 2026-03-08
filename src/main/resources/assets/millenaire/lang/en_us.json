@@ -1,0 +1,30 @@
+{
+  "item.millenaire.lime_dust": "Lime Dust",
+  "item.millenaire.lime_plaster_bucket": "Lime Plaster Bucket",
+
+  "itemGroup.millenaire.millenaire_blocks": "Millénaire Blocks",
+  "itemGroup.millenaire.millenaire_items": "Millénaire Items",
+
+  "block.millenaire.plain_timber_frame": "Plain Timber Frame",
+  "block.millenaire.cross_timber_frame": "Cross Timber Frame",
+  "block.millenaire.timber_frame_slab": "Timber Frame Slab",
+  "block.millenaire.timber_frame_stairs": "Timber Frame Stairs",
+  "block.millenaire.thatch": "Thatch",
+  "block.millenaire.thatch_slab": "Thatch Slab",
+  "block.millenaire.thatch_stairs": "Thatch Stairs",
+  "block.millenaire.plastered_mud": "Plastered Mud",
+  "block.millenaire.plastered_mud_brick": "Plastered Mud Brick",
+  "block.millenaire.plastered_mud_brick_slab": "Plastered Mud Brick Slab",
+  "block.millenaire.plastered_mud_brick_stairs": "Plastered Mud Brick Stairs",
+  "block.millenaire.plastered_mud_brick_wall": "Plastered Mud Brick Wall",
+  "block.millenaire.decorated_plastered_mud_brick": "Decorated Plastered Mud Brick",
+  "block.millenaire.ornamented_plastered_mud_brick": "Ornamented Plastered Mud Brick",
+  "block.millenaire.gold_ornament": "Gold Ornament",
+  "block.millenaire.byzantine_mosaic": "Byzantine Mosaic",
+  "block.millenaire.byzantine_fresco": "Byzantine Fresco",
+  "block.millenaire.light_blue_concrete_bricks": "Light Blue Concrete Brick",
+  "block.millenaire.light_blue_chiseled_concrete": "Light Blue Chiseled Concrete",
+  "block.millenaire.dirt_slab": "Dirt Slab",
+  "block.millenaire.dirt_path_wall": "Dirt Wall",
+  "block.millenaire.dirt_path_slab": "Dirt Path Slab"
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "millenaire:block/plastered_mud_brick_slab"
+    },
+    "type=double": {
+      "model": "millenaire:block/plastered_mud_brick"
+    },
+    "type=top": {
+      "model": "millenaire:block/plastered_mud_brick_slab_top"
+    }
+  }
+}
