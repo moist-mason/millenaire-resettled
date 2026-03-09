@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "millenaire:lime_plaster_bucket"
+    },
+    {
+      "item": "minecraft:mud_brick_slab"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "millenaire:plastered_mud_brick_slab"
+  }
+}

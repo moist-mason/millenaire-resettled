@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_plain_timber_frame": {
+      "conditions": {
+        "items": [
+          {
+            "items": "millenaire:plain_timber_frame"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "millenaire:timber_frame_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plain_timber_frame"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "millenaire:timber_frame_stairs"
+    ]
+  }
+}

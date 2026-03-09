@@ -1,6 +1,5 @@
 package com.github.moistmason.millenaire.data;
 
-import com.github.moistmason.millenaire.world.block.FarmSlabBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -31,20 +30,20 @@ public class MillenaireBlockStateProvider extends BlockStateProvider {
         stairsBlock(THATCH_STAIRS, modBlock("thatch_side"), modBlock("thatch_end"));
 
         block(PLASTERED_MUD);
-        block(PLASTERED_MUD_BRICK);
-        slabBlock(PLASTERED_MUD_BRICK_SLAB, modBlock("plastered_mud_brick"));
-        stairsBlock(PLASTERED_MUD_BRICK_STAIRS, modBlock("plastered_mud_brick"));
-        wallBlock(PLASTERED_MUD_BRICK_WALL, modBlock("plastered_mud_brick"));
-        block(DECORATED_PLASTERED_MUD_BRICK);
+        block(PLASTERED_MUD_BRICKS);
+        slabBlock(PLASTERED_MUD_BRICK_SLAB, modBlock("plastered_mud_bricks"));
+        stairsBlock(PLASTERED_MUD_BRICK_STAIRS, modBlock("plastered_mud_bricks"));
+        wallBlock(PLASTERED_MUD_BRICK_WALL, modBlock("plastered_mud_bricks"));
+        block(DECORATED_PLASTERED_MUD_BRICKS);
         block(ORNAMENTED_PLASTERED_MUD_BRICK);
-        block(GOLD_ORNAMENT);
+        block(ORNAMENTED_GOLD_BLOCK);
         block(BYZANTINE_MOSAIC);
         block(BYZANTINE_FRESCO);
-        block(LIGHT_BLUE_CONCRETE_BRICK);
+        block(LIGHT_BLUE_CONCRETE_BRICKS);
         block(LIGHT_BLUE_CHISELED_CONCRETE);
 
         slabBlock(DIRT_SLAB, vanillaBlock("dirt"));
-        block(DIRT_PATH_WALL, vanillaBlock("dirt_path_top"));
+        block(DIRT_WALL);
         blockItem(DIRT_PATH_SLAB); // manually generated block models and block state files
     }
 
@@ -52,9 +51,11 @@ public class MillenaireBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(block.get(), cubeAll(block.get()));
     }
 
+    /* Unused but probably needed later, please keep.
     private <T extends Block> void block(DeferredBlock<T> block, ResourceLocation parentTexture) {
         simpleBlockWithItem(block.get(), models().singleTexture(block.getId().getPath(), vanillaBlock("cube_all"), "all", parentTexture));
     }
+     */
 
     private <T extends RotatedPillarBlock> void axisBlock(DeferredBlock<T> block, ResourceLocation side, ResourceLocation end) {
         axisBlock(block.get(), side, end);

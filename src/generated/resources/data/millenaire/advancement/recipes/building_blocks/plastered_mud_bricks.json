@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_plastered_mud": {
+      "conditions": {
+        "items": [
+          {
+            "items": "millenaire:plastered_mud"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "millenaire:plastered_mud_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plastered_mud"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "millenaire:plastered_mud_bricks"
+    ]
+  }
+}

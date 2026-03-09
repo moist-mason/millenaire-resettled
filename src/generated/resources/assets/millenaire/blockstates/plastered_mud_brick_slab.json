@@ -4,7 +4,7 @@
       "model": "millenaire:block/plastered_mud_brick_slab"
     },
     "type=double": {
-      "model": "millenaire:block/plastered_mud_brick"
+      "model": "millenaire:block/plastered_mud_bricks"
     },
     "type=top": {
       "model": "millenaire:block/plastered_mud_brick_slab_top"

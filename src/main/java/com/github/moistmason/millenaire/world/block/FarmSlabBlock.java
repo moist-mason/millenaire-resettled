@@ -12,7 +12,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class FarmSlabBlock extends SlabBlock {
     private static final VoxelShape BOTTOM_SHAPE = Block.box(0, 0, 0, 16, 7, 16);
     private static final VoxelShape TOP_SHAPE = Block.box(0, 8, 0, 16, 15, 16);
-    private static final VoxelShape DOUBLE_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 15.0, 16.0);
+    private static final VoxelShape DOUBLE_SHAPE = Block.box(0, 0, 0, 16, 15, 16);
 
     public FarmSlabBlock(Properties properties) {
         super(properties);

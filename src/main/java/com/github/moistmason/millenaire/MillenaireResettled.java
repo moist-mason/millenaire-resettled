@@ -1,8 +1,8 @@
 package com.github.moistmason.millenaire;
 
 import com.github.moistmason.millenaire.world.block.MillenaireBlocks;
-import com.github.moistmason.millenaire.world.item.group.MillenaireCreativeTabs;
 import com.github.moistmason.millenaire.world.item.MillenaireItems;
+import com.github.moistmason.millenaire.world.item.group.MillenaireCreativeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -20,7 +20,7 @@ public class MillenaireResettled {
     private static List<DeferredRegister<?>> registries() {
         return List.of(
                 MillenaireItems.MILLENAIRE_ITEMS, MillenaireBlocks.MILLENAIRE_BLOCKS,
-                MillenaireCreativeTabs.CREATIVE_MODE_TABS
+                MillenaireCreativeTabs.MILLENAIRE_CREATIVE_MODE_TABS
         );
     }
 }

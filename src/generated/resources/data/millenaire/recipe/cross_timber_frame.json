@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "pattern": [
+    "BAB",
+    "ABA",
+    "BAB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "millenaire:cross_timber_frame"
+  }
+}

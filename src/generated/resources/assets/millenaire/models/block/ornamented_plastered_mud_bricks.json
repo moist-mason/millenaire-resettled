@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "millenaire:block/ornamented_plastered_mud_bricks"
+  }
+}

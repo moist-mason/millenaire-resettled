@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/wall_inventory",
   "textures": {
-    "wall": "millenaire:block/plastered_mud_brick"
+    "wall": "millenaire:block/plastered_mud_bricks"
   }
 }

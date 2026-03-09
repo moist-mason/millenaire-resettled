@@ -1,7 +1,6 @@
 package com.github.moistmason.millenaire.world.event;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
@@ -14,7 +13,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
 import static com.github.moistmason.millenaire.MillenaireResettled.MOD_ID;
-import static com.github.moistmason.millenaire.world.block.MillenaireBlocks.*;
+import static com.github.moistmason.millenaire.world.block.MillenaireBlocks.DIRT_PATH_SLAB;
+import static com.github.moistmason.millenaire.world.block.MillenaireBlocks.DIRT_SLAB;
 
 @EventBusSubscriber(modid = MOD_ID)
 public class MillenaireBlockEvents {

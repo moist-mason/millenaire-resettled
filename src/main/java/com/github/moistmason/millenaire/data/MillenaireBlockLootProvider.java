@@ -7,9 +7,9 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 
-import static com.github.moistmason.millenaire.world.block.MillenaireBlocks.*;
-
 import java.util.Set;
+
+import static com.github.moistmason.millenaire.world.block.MillenaireBlocks.*;
 
 public class MillenaireBlockLootProvider extends BlockLootSubProvider {
     protected MillenaireBlockLootProvider(HolderLookup.Provider registries) {
@@ -26,19 +26,19 @@ public class MillenaireBlockLootProvider extends BlockLootSubProvider {
         dropSlab(THATCH_SLAB.get());
         dropSelf(THATCH_STAIRS.get());
         dropSelf(PLASTERED_MUD.get());
-        dropSelf(PLASTERED_MUD_BRICK.get());
+        dropSelf(PLASTERED_MUD_BRICKS.get());
         dropSlab(PLASTERED_MUD_BRICK_SLAB.get());
         dropSelf(PLASTERED_MUD_BRICK_STAIRS.get());
         dropSelf(PLASTERED_MUD_BRICK_WALL.get());
-        dropSelf(DECORATED_PLASTERED_MUD_BRICK.get());
+        dropSelf(DECORATED_PLASTERED_MUD_BRICKS.get());
         dropSelf(ORNAMENTED_PLASTERED_MUD_BRICK.get());
-        dropSelf(GOLD_ORNAMENT.get());
+        dropSelf(ORNAMENTED_GOLD_BLOCK.get());
         dropSelf(BYZANTINE_MOSAIC.get());
         dropSelf(BYZANTINE_FRESCO.get());
-        dropSelf(LIGHT_BLUE_CONCRETE_BRICK.get());
+        dropSelf(LIGHT_BLUE_CONCRETE_BRICKS.get());
         dropSelf(LIGHT_BLUE_CHISELED_CONCRETE.get());
         dropSlab(DIRT_SLAB.get());
-        dropSelf(DIRT_PATH_WALL.get());
+        dropSelf(DIRT_WALL.get());
         dropSlab(DIRT_PATH_SLAB.get());
         dropWhenSilkTouch(DIRT_PATH_SLAB.get());
         dropOther(DIRT_PATH_SLAB.get(), DIRT_SLAB.get());

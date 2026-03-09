@@ -1,16 +1,16 @@
 {
   "values": [
     "millenaire:plastered_mud",
-    "millenaire:plastered_mud_brick",
+    "millenaire:plastered_mud_bricks",
     "millenaire:plastered_mud_brick_slab",
     "millenaire:plastered_mud_brick_stairs",
     "millenaire:plastered_mud_brick_wall",
-    "millenaire:decorated_plastered_mud_brick",
-    "millenaire:ornamented_plastered_mud_brick",
-    "millenaire:gold_ornament",
+    "millenaire:decorated_plastered_mud_bricks",
+    "millenaire:ornamented_plastered_mud_bricks",
+    "millenaire:ornamented_gold_block",
     "millenaire:byzantine_mosaic",
     "millenaire:byzantine_fresco",
-    "millenaire:light_blue_concrete_brick",
+    "millenaire:light_blue_concrete_bricks",
     "millenaire:light_blue_chiseled_concrete"
   ]
 }

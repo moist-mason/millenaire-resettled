@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_wall_side_tall",
   "textures": {
-    "wall": "millenaire:block/plastered_mud_brick"
+    "wall": "millenaire:block/plastered_mud_bricks"
   }
 }

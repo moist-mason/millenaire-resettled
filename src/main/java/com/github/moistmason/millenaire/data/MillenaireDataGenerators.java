@@ -29,6 +29,7 @@ public class MillenaireDataGenerators {
         generator.addProvider(event.includeServer(), new MillenaireBlockTagsProvider(out, lookupProvider, fileHelper));
         generator.addProvider(event.includeServer(), new LootTableProvider(out, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(MillenaireBlockLootProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
+        generator.addProvider(event.includeServer(), new MillenaireRecipeProvider(out, lookupProvider));
 
         generator.addProvider(event.includeClient(), new MillenaireBlockStateProvider(out, fileHelper));
         generator.addProvider(event.includeClient(), new MillenaireItemModelProvider(out, fileHelper));
