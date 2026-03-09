@@ -12,8 +12,4 @@ public class MillenaireBlockProperties {
     public static final Properties STONE_DECORATION_PROPERTIES = Properties.of()
             .strength(1.5F, 10)
             .sound(SoundType.STONE);
-
-    public static final Properties PAINTED_BRICK_PROPERTIES = Properties.of()
-            .strength(1.5F, 10)
-            .sound(SoundType.STONE);
 }

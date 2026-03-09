@@ -9,12 +9,12 @@ import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class DirtPathSlabBlock extends SlabBlock {
+public class FarmSlabBlock extends SlabBlock {
     private static final VoxelShape BOTTOM_SHAPE = Block.box(0, 0, 0, 16, 7, 16);
-    private static final VoxelShape TOP_SHAPE = Block.box(0, 7, 0, 16, 16, 16);
+    private static final VoxelShape TOP_SHAPE = Block.box(0, 8, 0, 16, 15, 16);
     private static final VoxelShape DOUBLE_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 15.0, 16.0);
 
-    public DirtPathSlabBlock(Properties properties) {
+    public FarmSlabBlock(Properties properties) {
         super(properties);
     }
 

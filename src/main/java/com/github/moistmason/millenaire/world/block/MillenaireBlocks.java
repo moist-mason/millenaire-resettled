@@ -42,9 +42,9 @@ public class MillenaireBlocks {
     public static final DeferredBlock<Block> LIGHT_BLUE_CHISELED_CONCRETE = register("light_blue_chiseled_concrete", supply(STONE_DECORATION_PROPERTIES, MapColor.COLOR_LIGHT_BLUE));
 
     /** Dirt paths **/
-    public static final DeferredBlock<DirtSlabBlock> DIRT_SLAB = register("dirt_slab", supply(DirtSlabBlock::new, Blocks.DIRT));
+    public static final DeferredBlock<SlabBlock> DIRT_SLAB = register("dirt_slab", supply(SlabBlock::new, Blocks.DIRT));
     public static final DeferredBlock<Block> DIRT_PATH_WALL = register("dirt_path_wall", supply(Blocks.DIRT_PATH));
-    public static final DeferredBlock<DirtPathSlabBlock> DIRT_PATH_SLAB = register("dirt_path_slab", supply(DirtPathSlabBlock::new, Blocks.DIRT_PATH));
+    public static final DeferredBlock<FarmSlabBlock> DIRT_PATH_SLAB = register("dirt_path_slab", supply(FarmSlabBlock::new, Blocks.DIRT_PATH));
 
     private static <T extends Block> DeferredBlock<T> register(String id, Supplier<T> data) {
         DeferredBlock<T> block = MILLENAIRE_BLOCKS.register(id, data);

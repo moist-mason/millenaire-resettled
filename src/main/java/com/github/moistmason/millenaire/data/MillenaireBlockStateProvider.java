@@ -1,8 +1,8 @@
 package com.github.moistmason.millenaire.data;
 
+import com.github.moistmason.millenaire.world.block.FarmSlabBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.*;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -45,7 +45,7 @@ public class MillenaireBlockStateProvider extends BlockStateProvider {
 
         slabBlock(DIRT_SLAB, vanillaBlock("dirt"));
         block(DIRT_PATH_WALL, vanillaBlock("dirt_path_top"));
-        slabBlock(DIRT_PATH_SLAB, vanillaBlock("dirt_path"), vanillaBlock("dirt_path_side"), vanillaBlock("dirt"), vanillaBlock("dirt_path_top"));
+        blockItem(DIRT_PATH_SLAB); // manually generated block models and block state files
     }
 
     private <T extends Block> void block(DeferredBlock<T> block) {
