@@ -32,6 +32,10 @@ public class MillenaireBlockEvents {
             level.removeBlock(pos, false);
             level.setBlockAndUpdate(pos, DIRT_PATH_SLAB.get().defaultBlockState());
             level.playSound(player, pos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS);
+
+            if (player != null) {
+                player.swing(player.getUsedItemHand());
+            }
         }
     }
 }

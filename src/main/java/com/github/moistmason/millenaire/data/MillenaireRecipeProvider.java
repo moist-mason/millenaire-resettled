@@ -26,6 +26,7 @@ public class MillenaireRecipeProvider extends RecipeProvider implements IConditi
         buildBlockCraftingRecipes(output);
         buildItemCraftingRecipes(output);
         buildSmeltingRecipes(output);
+        buildStonecutterRecipes(output);
     }
 
     protected void buildBlockCraftingRecipes(RecipeOutput output) {
@@ -153,6 +154,16 @@ public class MillenaireRecipeProvider extends RecipeProvider implements IConditi
     protected void buildSmeltingRecipes(RecipeOutput output) {
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(CALCITE), RecipeCategory.MISC, LIME_DUST, 0.1F, 200)
                 .unlockedBy("has_calcite", has(CALCITE))
-                .save(output);
+                .save(output); // smeltingResultFromBase() not used here to maintain intended recipe category
+    }
+
+    protected void buildStonecutterRecipes(RecipeOutput output) {
+        stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICKS, PLASTERED_MUD);
+        stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICK_SLAB, PLASTERED_MUD, 2);
+        stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICK_SLAB, PLASTERED_MUD_BRICKS, 2);
+        stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICK_STAIRS, PLASTERED_MUD);
+        stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICK_STAIRS, PLASTERED_MUD_BRICKS);
+        stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICK_WALL, PLASTERED_MUD);
+        stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICK_WALL, PLASTERED_MUD_BRICKS);
     }
 }

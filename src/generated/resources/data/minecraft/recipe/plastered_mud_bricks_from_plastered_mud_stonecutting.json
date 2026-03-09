@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "millenaire:plastered_mud"
+  },
+  "result": {
+    "count": 1,
+    "id": "millenaire:plastered_mud_bricks"
+  }
+}
