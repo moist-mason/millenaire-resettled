@@ -8,13 +8,13 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
-import static com.github.moistmason.millenaire.world.item.crafting.CommonShapedRecipes.*;
+import java.util.concurrent.CompletableFuture;
+
 import static com.github.moistmason.millenaire.util.ResourceProvider.modResource;
 import static com.github.moistmason.millenaire.world.block.MillenaireBlocks.*;
 import static com.github.moistmason.millenaire.world.item.MillenaireItems.*;
+import static com.github.moistmason.millenaire.world.item.crafting.CommonShapedRecipes.*;
 import static net.minecraft.world.item.Items.*;
-
-import java.util.concurrent.CompletableFuture;
 
 public class MillenaireRecipeProvider extends RecipeProvider implements IConditionBuilder {
     public MillenaireRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

@@ -11,7 +11,6 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
@@ -37,10 +36,6 @@ public class CommonShapedRecipes {
                 .pattern("## ")
                 .define('#', base)
                 .unlockedBy(getHasName(base), has(base)).save(output);
-    }
-
-    public static <T extends SlabBlock> void slabRecipe(RecipeOutput output, DeferredBlock<?> base, DeferredBlock<T> result) {
-        slabRecipe(output, base.get(), result);
     }
 
     public static <T extends SlabBlock> void slabRecipe(RecipeOutput output, ItemLike base, DeferredBlock<T> result) {
