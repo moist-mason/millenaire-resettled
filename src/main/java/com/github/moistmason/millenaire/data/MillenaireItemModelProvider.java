@@ -5,7 +5,8 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-import static com.github.moistmason.millenaire.world.item.MillenaireItems.*;
+import static com.github.moistmason.millenaire.world.item.MillenaireItems.LIME_DUST;
+import static com.github.moistmason.millenaire.world.item.MillenaireItems.LIME_PLASTER_BUCKET;
 
 public class MillenaireItemModelProvider extends ItemModelProvider {
     public MillenaireItemModelProvider(PackOutput output, ExistingFileHelper fileHelper) {

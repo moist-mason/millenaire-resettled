@@ -1,6 +1,6 @@
 package com.github.moistmason.millenaire.world.item;
 
-import com.github.moistmason.millenaire.util.RegistryUtil;
+import com.github.moistmason.library.registry.RegistryUtil;
 import net.minecraft.core.Holder;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

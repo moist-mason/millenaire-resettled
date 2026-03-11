@@ -69,9 +69,11 @@ configurations {
 
 repositories {
     maven { url = 'https://maven.blamejared.com/' }
+    maven { url = 'https://github.com/moist-mason/masons-mod-maven/raw/maven/'}
 }
 
 dependencies {
+    implementation 'com.github.moistmason.library:masons-library:0.1.0-DEV-1'
     compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
     compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
     localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"

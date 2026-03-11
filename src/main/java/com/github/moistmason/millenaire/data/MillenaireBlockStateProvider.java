@@ -1,19 +1,13 @@
 package com.github.moistmason.millenaire.data;
 
+import com.github.moistmason.library.data.LibraryBlockStateProvider;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.*;
-import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.registries.DeferredBlock;
 
 import static com.github.moistmason.millenaire.MillenaireResettled.MOD_ID;
-import static com.github.moistmason.millenaire.util.ResourceProvider.modBlock;
-import static com.github.moistmason.millenaire.util.ResourceProvider.vanillaBlock;
 import static com.github.moistmason.millenaire.world.block.MillenaireBlocks.*;
 
-public class MillenaireBlockStateProvider extends BlockStateProvider {
+public class MillenaireBlockStateProvider extends LibraryBlockStateProvider {
 
     public MillenaireBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, MOD_ID, exFileHelper);
@@ -45,61 +39,5 @@ public class MillenaireBlockStateProvider extends BlockStateProvider {
         slabBlock(DIRT_SLAB, vanillaBlock("dirt"));
         block(DIRT_WALL);
         blockItem(DIRT_PATH_SLAB); // manually generated block models and block state files
-    }
-
-    private <T extends Block> void block(DeferredBlock<T> block) {
-        simpleBlockWithItem(block.get(), cubeAll(block.get()));
-    }
-
-    /* Unused but probably needed later, please keep.
-    private <T extends Block> void block(DeferredBlock<T> block, ResourceLocation parentTexture) {
-        simpleBlockWithItem(block.get(), models().singleTexture(block.getId().getPath(), vanillaBlock("cube_all"), "all", parentTexture));
-    }
-     */
-
-    private <T extends RotatedPillarBlock> void axisBlock(DeferredBlock<T> block, ResourceLocation side, ResourceLocation end) {
-        axisBlock(block.get(), side, end);
-        blockItem(block);
-    }
-
-    private <T extends SlabBlock> void slabBlock(DeferredBlock<T> block, ResourceLocation parent) {
-        slabBlock(block, parent, parent, parent, parent);
-    }
-
-    private <T extends SlabBlock> void slabBlock(DeferredBlock<T> block, ResourceLocation doubleSlab, ResourceLocation side, ResourceLocation end) {
-        slabBlock(block, doubleSlab, side, end, end);
-    }
-
-    private <T extends SlabBlock> void slabBlock(DeferredBlock<T> block, ResourceLocation doubleSlab, ResourceLocation side, ResourceLocation bottom, ResourceLocation top) {
-        slabBlock(block.get(), doubleSlab, side, bottom, top);
-        blockItem(block);
-    }
-
-    private <T extends StairBlock> void stairsBlock(DeferredBlock<T> block, ResourceLocation texture) {
-        stairsBlock(block, texture, texture, texture);
-    }
-
-    private <T extends StairBlock> void stairsBlock(DeferredBlock<T> block, ResourceLocation side, ResourceLocation end) {
-        stairsBlock(block, side, end, end);
-    }
-
-    private <T extends StairBlock> void stairsBlock(DeferredBlock<T> block, ResourceLocation side, ResourceLocation bottom, ResourceLocation top) {
-        stairsBlock(block.get(), side, bottom, top);
-        blockItem(block);
-    }
-
-    private <T extends WallBlock> void wallBlock(DeferredBlock<T> block, ResourceLocation texture) {
-        wallBlock(block.get(), texture);
-        models().wallInventory(block.getId().getPath() + "_inventory", texture);
-        blockItem(block, "inventory");
-    }
-
-    private <T extends Block> void blockItem(DeferredBlock<T> block) {
-        blockItem(block, null);
-    }
-
-    private <T extends Block> void blockItem(DeferredBlock<T> block, String appendix) {
-        String id = appendix != null ? block.getId().getPath() + "_" + appendix : block.getId().getPath();
-        simpleBlockItem(block.get(), new ModelFile.UncheckedModelFile(modBlock(id)));
     }
 }

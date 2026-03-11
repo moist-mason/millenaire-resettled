@@ -33,5 +33,6 @@ public class MillenaireDataGenerators {
 
         generator.addProvider(event.includeClient(), new MillenaireBlockStateProvider(out, fileHelper));
         generator.addProvider(event.includeClient(), new MillenaireItemModelProvider(out, fileHelper));
+        generator.addProvider(event.includeClient(), new MillenaireEnglishLanguageProvider(out));
     }
 }
