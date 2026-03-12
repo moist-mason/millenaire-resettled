@@ -1,5 +1,6 @@
 package com.github.moistmason.millenaire.data;
 
+import com.github.moistmason.millenaire.world.block.DyedBlockSet;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -42,6 +43,13 @@ public class MillenaireBlockLootProvider extends BlockLootSubProvider {
         dropSlab(DIRT_PATH_SLAB.get());
         dropWhenSilkTouch(DIRT_PATH_SLAB.get());
         dropOther(DIRT_PATH_SLAB.get(), DIRT_SLAB.get());
+
+        for (DyedBlockSet set : paintedBricksList) {
+            dropSelf(set.getBlock().get());
+            dropSlab(set.getSlabBlock().get());
+            dropSelf(set.getStairBlock().get());
+            dropSelf(set.getWallBlock().get());
+        }
     }
 
     @Override

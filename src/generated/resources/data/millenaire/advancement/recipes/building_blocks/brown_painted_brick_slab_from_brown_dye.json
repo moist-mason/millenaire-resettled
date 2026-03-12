@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brown_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brown_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_plastered_mud_brick_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "millenaire:plastered_mud_brick_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "millenaire:brown_painted_brick_slab_from_brown_dye"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plastered_mud_brick_slab",
+      "has_brown_dye"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "millenaire:brown_painted_brick_slab_from_brown_dye"
+    ]
+  }
+}

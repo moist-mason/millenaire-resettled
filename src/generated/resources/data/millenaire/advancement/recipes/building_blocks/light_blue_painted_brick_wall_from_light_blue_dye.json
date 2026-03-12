@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_light_blue_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:light_blue_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_plastered_mud_brick_wall": {
+      "conditions": {
+        "items": [
+          {
+            "items": "millenaire:plastered_mud_brick_wall"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "millenaire:light_blue_painted_brick_wall_from_light_blue_dye"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plastered_mud_brick_wall",
+      "has_light_blue_dye"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "millenaire:light_blue_painted_brick_wall_from_light_blue_dye"
+    ]
+  }
+}

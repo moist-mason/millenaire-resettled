@@ -1,6 +1,7 @@
 package com.github.moistmason.millenaire.data;
 
 import com.github.moistmason.library.data.LibraryBlockStateProvider;
+import com.github.moistmason.millenaire.world.block.DyedBlockSet;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -39,5 +40,12 @@ public class MillenaireBlockStateProvider extends LibraryBlockStateProvider {
         slabBlock(DIRT_SLAB, vanillaBlock("dirt"));
         block(DIRT_WALL);
         blockItem(DIRT_PATH_SLAB); // manually generated block models and block state files
+
+        for (DyedBlockSet set : paintedBricksList) {
+            block(set.getBlock());
+            slabBlock(set.getSlabBlock(), modBlock(set.getColorName() + "_painted_bricks"));
+            stairsBlock(set.getStairBlock(), modBlock(set.getColorName() + "_painted_bricks"));
+            wallBlock(set.getWallBlock(), modBlock(set.getColorName() + "_painted_bricks"));
+        }
     }
 }

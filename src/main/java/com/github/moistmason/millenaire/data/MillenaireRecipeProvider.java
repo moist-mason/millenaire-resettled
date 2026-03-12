@@ -1,12 +1,12 @@
 package com.github.moistmason.millenaire.data;
 
 import com.github.moistmason.library.data.LibraryRecipeProvider;
+import com.github.moistmason.millenaire.world.block.DyedBlockSet;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
@@ -58,38 +58,38 @@ public class MillenaireRecipeProvider extends LibraryRecipeProvider implements I
                 .requires(LIME_PLASTER_BUCKET)
                 .requires(MUD)
                 .unlockedBy("has_lime_plaster_bucket", has(LIME_PLASTER_BUCKET))
-                .unlockedBy("has_mud", has(MUD)).save(output);
+                .unlockedBy(hasName(MUD), has(MUD)).save(output);
 
         twoSquaredRecipe(output, RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD, PLASTERED_MUD_BRICKS, 4);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICKS)
                 .requires(LIME_PLASTER_BUCKET)
                 .requires(Blocks.MUD_BRICKS)
-                .unlockedBy("has_lime_plaster_bucket", has(LIME_PLASTER_BUCKET))
-                .unlockedBy("has_mud_brick", has(MUD_BRICKS)).save(output, ResourceLocation.fromNamespaceAndPath(MOD_ID, "plastered_mud_brick_from_mud_brick"));
+                .unlockedBy(hasName(LIME_PLASTER_BUCKET), has(LIME_PLASTER_BUCKET))
+                .unlockedBy(hasName(MUD_BRICKS), has(MUD_BRICKS)).save(output, ResourceLocation.fromNamespaceAndPath(MOD_ID, "plastered_mud_brick_from_mud_brick"));
 
         slabRecipe(output, PLASTERED_MUD_BRICKS, PLASTERED_MUD_BRICK_SLAB);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICK_SLAB)
                 .requires(LIME_PLASTER_BUCKET)
                 .requires(Blocks.MUD_BRICK_SLAB)
-                .unlockedBy("has_lime_plaster_bucket", has(LIME_PLASTER_BUCKET))
-                .unlockedBy("has_mud_brick_slab", has(MUD_BRICK_SLAB)).save(output, modResource("plastered_mud_brick_slab_from_mud_brick_slab"));
+                .unlockedBy(hasName(LIME_PLASTER_BUCKET), has(LIME_PLASTER_BUCKET))
+                .unlockedBy(hasName(MUD_BRICK_SLAB), has(MUD_BRICK_SLAB)).save(output, modResource("plastered_mud_brick_slab_from_mud_brick_slab"));
 
         stairRecipe(output, PLASTERED_MUD_BRICKS, PLASTERED_MUD_BRICK_STAIRS);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICK_STAIRS)
                 .requires(LIME_PLASTER_BUCKET)
                 .requires(Blocks.MUD_BRICK_STAIRS)
-                .unlockedBy("has_lime_plaster_bucket", has(LIME_PLASTER_BUCKET))
-                .unlockedBy("has_mud_brick_stairs", has(MUD_BRICK_STAIRS)).save(output, modResource("plastered_mud_brick_stairs_from_mud_brick_stairs"));
+                .unlockedBy(hasName(LIME_PLASTER_BUCKET), has(LIME_PLASTER_BUCKET))
+                .unlockedBy(hasName(MUD_BRICK_STAIRS), has(MUD_BRICK_STAIRS)).save(output, modResource("plastered_mud_brick_stairs_from_mud_brick_stairs"));
 
         wallRecipe(output, PLASTERED_MUD_BRICKS, PLASTERED_MUD_BRICK_WALL);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICK_WALL)
                 .requires(LIME_PLASTER_BUCKET)
                 .requires(Blocks.MUD_BRICK_WALL)
-                .unlockedBy("has_lime_plaster_bucket", has(LIME_PLASTER_BUCKET))
+                .unlockedBy(hasName(LIME_PLASTER_BUCKET), has(LIME_PLASTER_BUCKET))
                 .unlockedBy("has_mud_brick_wall", has(MUD_BRICK_WALL)).save(output, modResource("plastered_mud_brick_wall_from_mud_brick_wall"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DECORATED_PLASTERED_MUD_BRICKS)
@@ -98,13 +98,13 @@ public class MillenaireRecipeProvider extends LibraryRecipeProvider implements I
                 .pattern(" A ")
                 .define('A', DIAMOND)
                 .define('B', PLASTERED_MUD_BRICKS)
-                .unlockedBy("has_plastered_mud_bricks", has(PLASTERED_MUD_BRICKS)).save(output);
+                .unlockedBy(hasName(PLASTERED_MUD_BRICKS), has(PLASTERED_MUD_BRICKS)).save(output);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ORNAMENTED_PLASTERED_MUD_BRICK)
                 .pattern(" A ")
                 .pattern(" A ")
                 .define('A', PLASTERED_MUD_BRICK_SLAB)
-                .unlockedBy("has_plastered_mud_brick_slab", has(PLASTERED_MUD_BRICK_SLAB)).save(output);
+                .unlockedBy(hasName(PLASTERED_MUD_BRICK_SLAB), has(PLASTERED_MUD_BRICK_SLAB)).save(output);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ORNAMENTED_GOLD_BLOCK)
                 .pattern("BAB")
@@ -113,7 +113,7 @@ public class MillenaireRecipeProvider extends LibraryRecipeProvider implements I
                 .define('A', REDSTONE)
                 .define('B', LAPIS_LAZULI)
                 .define('C', GOLD_BLOCK)
-                .unlockedBy("has_gold_block", has(GOLD_BLOCK)).save(output);
+                .unlockedBy(hasName(GOLD_BLOCK), has(GOLD_BLOCK)).save(output);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BYZANTINE_MOSAIC)
                 .pattern(" A ")
@@ -121,7 +121,7 @@ public class MillenaireRecipeProvider extends LibraryRecipeProvider implements I
                 .pattern(" A ")
                 .define('A', REDSTONE)
                 .define('B', GOLD_BLOCK)
-                .unlockedBy("has_gold_block", has(GOLD_BLOCK)).save(output);
+                .unlockedBy(hasName(GOLD_BLOCK), has(GOLD_BLOCK)).save(output);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BYZANTINE_FRESCO)
                 .pattern(" A ")
@@ -129,7 +129,7 @@ public class MillenaireRecipeProvider extends LibraryRecipeProvider implements I
                 .pattern(" A ")
                 .define('A', LAPIS_LAZULI)
                 .define('B', GOLD_BLOCK)
-                .unlockedBy("has_gold_block", has(GOLD_BLOCK)).save(output);
+                .unlockedBy(hasName(GOLD_BLOCK), has(GOLD_BLOCK)).save(output);
 
         twoSquaredRecipe(output, RecipeCategory.BUILDING_BLOCKS, LIGHT_BLUE_CONCRETE, LIGHT_BLUE_CONCRETE_BRICKS);
 
@@ -137,11 +137,44 @@ public class MillenaireRecipeProvider extends LibraryRecipeProvider implements I
                 .pattern("A")
                 .pattern("A")
                 .define('A', LIGHT_BLUE_CONCRETE)
-                .unlockedBy("has_light_blue_concrete", has(LIGHT_BLUE_CONCRETE)).save(output);
+                .unlockedBy(hasName(LIGHT_BLUE_CONCRETE), has(LIGHT_BLUE_CONCRETE)).save(output);
 
         slabRecipe(output, DIRT, DIRT_SLAB);
         twoSquaredRecipe(output, RecipeCategory.BUILDING_BLOCKS, DIRT, DIRT_WALL);
         slabRecipe(output, DIRT_PATH, DIRT_PATH_SLAB);
+
+        for (DyedBlockSet set : paintedBricksList) {
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, set.getBlock())
+                    .requires(PLASTERED_MUD_BRICKS)
+                    .requires(set.getDyeItem())
+                    .unlockedBy(hasName(PLASTERED_MUD_BRICKS), has(PLASTERED_MUD_BRICKS))
+                    .unlockedBy(hasName(set.getDyeItem()), has(set.getDyeItem())).save(output);
+
+            slabRecipe(output, set.getBlock(), set.getSlabBlock());
+            stairRecipe(output, set.getBlock(), set.getStairBlock());
+            wallRecipe(output, set.getBlock(), set.getWallBlock());
+
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, set.getSlabBlock())
+                    .requires(PLASTERED_MUD_BRICK_SLAB)
+                    .requires(set.getDyeItem())
+                    .unlockedBy(hasName(PLASTERED_MUD_BRICK_SLAB), has(PLASTERED_MUD_BRICK_SLAB))
+                    .unlockedBy(hasName(set.getDyeItem()), has(set.getDyeItem()))
+                    .save(output, modResource(set.getSlabBlock().getId().getPath() + "_from_" + set.getColorName() + "_dye"));
+
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, set.getStairBlock())
+                    .requires(PLASTERED_MUD_BRICK_STAIRS)
+                    .requires(set.getDyeItem())
+                    .unlockedBy(hasName(PLASTERED_MUD_BRICK_STAIRS), has(PLASTERED_MUD_BRICK_STAIRS))
+                    .unlockedBy(hasName(set.getDyeItem()), has(set.getDyeItem()))
+                    .save(output, modResource(set.getStairBlock().getId().getPath() + "_from_" + set.getColorName() + "_dye"));
+
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, set.getWallBlock())
+                    .requires(PLASTERED_MUD_BRICK_WALL)
+                    .requires(set.getDyeItem())
+                    .unlockedBy(hasName(PLASTERED_MUD_BRICK_WALL), has(PLASTERED_MUD_BRICK_WALL))
+                    .unlockedBy(hasName(set.getDyeItem()), has(set.getDyeItem()))
+                    .save(output, modResource(set.getWallBlock().getId().getPath() + "_from_" + set.getColorName() + "_dye"));
+        }
     }
 
     protected void buildItemCraftingRecipes(RecipeOutput output) {
@@ -153,9 +186,7 @@ public class MillenaireRecipeProvider extends LibraryRecipeProvider implements I
     }
 
     protected void buildSmeltingRecipes(RecipeOutput output) {
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(CALCITE), RecipeCategory.MISC, LIME_DUST, 0.1F, 200)
-                .unlockedBy("has_calcite", has(CALCITE))
-                .save(output); //TODO: add unlockedBy call in smeltingBase
+        simpleSmeltingRecipe(output, RecipeCategory.MISC, CALCITE, LIME_DUST);
     }
 
     protected void buildStonecutterRecipes(RecipeOutput output) {

@@ -9,6 +9,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 
+import java.util.List;
 import java.util.function.Predicate;
 
 import static com.github.moistmason.millenaire.MillenaireResettled.MOD_ID;
@@ -23,10 +24,13 @@ public class MillenaireEnglishLanguageProvider extends LibraryEnglishLanguagePro
         add(MillenaireItems.MILLENAIRE_ITEMS, "item", (item) -> !(item instanceof BlockItem));
         add(MillenaireBlocks.MILLENAIRE_BLOCKS, "block", excludedBlockPredicate());
         addBlock(MillenaireBlocks.ORNAMENTED_GOLD_BLOCK, "Ornamented Block of Gold");
-        add(MillenaireCreativeTabs.MILLENAIRE_CREATIVE_MODE_TABS, "itemGroup");
+
+        addCreativeTab(MillenaireCreativeTabs.BLOCK_TAB, "Millénaire Blocks");
+        addCreativeTab(MillenaireCreativeTabs.ITEM_TAB, "Millénaire Items");
     }
 
     public <T extends Block> Predicate<T> excludedBlockPredicate() {
-        return block -> !RegistryUtil.getId(MillenaireBlocks.MILLENAIRE_BLOCKS, block).equals("ornamented_gold_block");
+        List<String> toExclude = List.of("ornamented_gold_block");
+        return block -> !RegistryUtil.getId(MillenaireBlocks.MILLENAIRE_BLOCKS, block).equals(toExclude.stream().findAny().get());
     }
 }

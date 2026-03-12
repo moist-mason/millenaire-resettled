@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_magenta_painted_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "millenaire:magenta_painted_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "millenaire:magenta_painted_brick_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_magenta_painted_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "millenaire:magenta_painted_brick_slab"
+    ]
+  }
+}

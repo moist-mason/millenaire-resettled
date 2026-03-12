@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side",
+  "textures": {
+    "wall": "millenaire:block/pink_painted_bricks"
+  }
+}

@@ -7,6 +7,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Supplier;
 
@@ -17,6 +18,8 @@ import static net.minecraft.world.level.block.Blocks.*;
 
 public class MillenaireBlocks {
     public static final DeferredRegister.Blocks MILLENAIRE_BLOCKS = DeferredRegister.createBlocks(MOD_ID);
+    public static List<DyedBlockSet> paintedBricksList = new LinkedList<>();
+    private static final String PAINTED_BRICK_PREFIX = "painted_brick";
 
     /** Wood decorations **/
     public static final DeferredBlock<Block> PLAIN_TIMBER_FRAME = register("plain_timber_frame", supply(OAK_PLANKS, MapColor.COLOR_BROWN)); // 4096/0
@@ -45,6 +48,25 @@ public class MillenaireBlocks {
     public static final DeferredBlock<SlabBlock> DIRT_SLAB = register("dirt_slab", supply(SlabBlock::new, DIRT.properties()));
     public static final DeferredBlock<Block> DIRT_WALL = register("dirt_wall", supply(DIRT));
     public static final DeferredBlock<FarmSlabBlock> DIRT_PATH_SLAB = register("dirt_path_slab", supply(FarmSlabBlock::new, DIRT_PATH.properties()));
+
+    static {
+
+        /* if every painted brick color and its block variants were added manually, we'd have **64** fields to enter. This is way easier. */
+        for (DyedBlockSet set : DyedBlockSet.values()) {
+            set.registerBlockPlural(MILLENAIRE_BLOCKS, PAINTED_BRICK_PREFIX, BRICKS.properties(), set.getMapColor());
+            set.registerSlabBlock(MILLENAIRE_BLOCKS, PAINTED_BRICK_PREFIX, BRICKS.properties());
+            set.registerStairBlock(MILLENAIRE_BLOCKS, PAINTED_BRICK_PREFIX, set.getBlock(), BRICKS.properties());
+            set.registerWallBlock(MILLENAIRE_BLOCKS, PAINTED_BRICK_PREFIX, BRICKS.properties());
+
+            paintedBricksList.add(set);
+        }
+
+        /*
+        for (DyeColor color : DyeColor.values()) {
+            register(color.getName() + "_decorated_painted_bricks", supply(DecoratedBrickBlock::new, BRICKS.properties(), color.getMapColor()));
+        }
+         */
+    }
 
     private static <T extends Block> DeferredBlock<T> register(String id, Supplier<T> data) {
         DeferredBlock<T> block = MILLENAIRE_BLOCKS.register(id, data);

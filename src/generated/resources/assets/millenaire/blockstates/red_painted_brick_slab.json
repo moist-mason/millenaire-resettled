@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "millenaire:block/red_painted_brick_slab"
+    },
+    "type=double": {
+      "model": "millenaire:block/red_painted_bricks"
+    },
+    "type=top": {
+      "model": "millenaire:block/red_painted_brick_slab_top"
+    }
+  }
+}
