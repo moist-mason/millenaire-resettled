@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "millenaire:block/magenta_painted_bricks",
+    "side": "millenaire:block/magenta_decorated_bricks_top",
+    "top": "millenaire:block/gray_painted_bricks"
+  }
+}

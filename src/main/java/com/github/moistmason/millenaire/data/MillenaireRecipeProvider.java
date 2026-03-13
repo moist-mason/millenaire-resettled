@@ -1,7 +1,7 @@
 package com.github.moistmason.millenaire.data;
 
 import com.github.moistmason.library.data.LibraryRecipeProvider;
-import com.github.moistmason.millenaire.world.block.DyedBlockSet;
+import com.github.moistmason.millenaire.world.block.PaintedBrickSet;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -143,7 +143,7 @@ public class MillenaireRecipeProvider extends LibraryRecipeProvider implements I
         twoSquaredRecipe(output, RecipeCategory.BUILDING_BLOCKS, DIRT, DIRT_WALL);
         slabRecipe(output, DIRT_PATH, DIRT_PATH_SLAB);
 
-        for (DyedBlockSet set : paintedBricksList) {
+        for (PaintedBrickSet set : paintedBricksList) {
             ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, set.getBlock())
                     .requires(PLASTERED_MUD_BRICKS)
                     .requires(set.getDyeItem())

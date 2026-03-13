@@ -1,6 +1,5 @@
 package com.github.moistmason.millenaire.world.event;
 
-import com.github.moistmason.library.registry.RegistryUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

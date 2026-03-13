@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "brick_above=false,brick_below=false": {
+      "model": "millenaire:block/cyan_decorated_bricks_bottom"
+    },
+    "brick_above=false,brick_below=true": {
+      "model": "millenaire:block/cyan_decorated_bricks_top"
+    },
+    "brick_above=true,brick_below=false": {
+      "model": "millenaire:block/cyan_decorated_bricks_bottom"
+    },
+    "brick_above=true,brick_below=true": {
+      "model": "millenaire:block/cyan_decorated_bricks_middle"
+    }
+  }
+}

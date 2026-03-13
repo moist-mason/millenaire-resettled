@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "millenaire:block/gray_decorated_bricks_middle",
+    "end": "millenaire:block/gray_painted_bricks",
+    "side": "millenaire:block/gray_decorated_bricks_middle"
+  }
+}
