@@ -30,12 +30,18 @@ public class MillenaireBlockTagsProvider extends BlockTagsProvider {
                         PLASTERED_MUD_BRICK_WALL.get(), DECORATED_PLASTERED_MUD_BRICKS.get(), ORNAMENTED_PLASTERED_MUD_BRICK.get(), ORNAMENTED_GOLD_BLOCK.get(),
                         BYZANTINE_MOSAIC.get(), BYZANTINE_FRESCO.get(), LIGHT_BLUE_CONCRETE_BRICKS.get(), LIGHT_BLUE_CHISELED_CONCRETE.get());
 
+        tag(BlockTags.WALLS)
+                .add(PLASTERED_MUD_BRICK_WALL.get());
+
         for (PaintedBrickSet set : paintedBricksList) {
             tag(BlockTags.MINEABLE_WITH_PICKAXE).add(set.getBlock().get(), set.getSlabBlock().get(),
                     set.getStairBlock().get(), set.getWallBlock().get(), set.getDecoratedBlock().get());
+            tag(BlockTags.WALLS).add(set.getWallBlock().get());
         }
 
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(DIRT_SLAB.get(), DIRT_WALL.get(), DIRT_PATH_SLAB.get());
+
+
     }
 }

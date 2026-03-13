@@ -14,7 +14,7 @@ Note it is subject to change.
 2. Items
 3. GUIs
 4. Culture infrastructure
-4. Villagers and Villages
-5. Advanced items
-5. Trading system
-6. Quests
+5. Villagers and Villages
+6. Advanced items
+7. Trading system
+8. Quests
