@@ -19,7 +19,7 @@ import static net.minecraft.world.item.Items.*;
 
 public class MillenaireRecipeProvider extends LibraryRecipeProvider implements IConditionBuilder {
     public MillenaireRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, MILLENAIRE_ITEMS);
+        super(output, registries, MOD_ID, MILLENAIRE_ITEMS);
     }
 
     @Override
@@ -66,7 +66,7 @@ public class MillenaireRecipeProvider extends LibraryRecipeProvider implements I
                 .requires(LIME_PLASTER_BUCKET)
                 .requires(Blocks.MUD_BRICKS)
                 .unlockedBy(hasName(LIME_PLASTER_BUCKET), has(LIME_PLASTER_BUCKET))
-                .unlockedBy(hasName(MUD_BRICKS), has(MUD_BRICKS)).save(output, ResourceLocation.fromNamespaceAndPath(MOD_ID, "plastered_mud_brick_from_mud_brick"));
+                .unlockedBy(hasName(MUD_BRICKS), has(MUD_BRICKS)).save(output, modResource("plastered_mud_brick_from_mud_brick"));
 
         slabRecipe(output, PLASTERED_MUD_BRICKS, PLASTERED_MUD_BRICK_SLAB);
 
@@ -197,10 +197,5 @@ public class MillenaireRecipeProvider extends LibraryRecipeProvider implements I
         stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICK_STAIRS, PLASTERED_MUD_BRICKS);
         stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICK_WALL, PLASTERED_MUD);
         stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, PLASTERED_MUD_BRICK_WALL, PLASTERED_MUD_BRICKS);
-    }
-
-    // TODO: Remove after Library update.
-    private static ResourceLocation modResource(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 }

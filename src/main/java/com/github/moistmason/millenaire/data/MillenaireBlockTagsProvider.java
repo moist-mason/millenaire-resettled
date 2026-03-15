@@ -28,7 +28,9 @@ public class MillenaireBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(PLASTERED_MUD.get(), PLASTERED_MUD_BRICKS.get(), PLASTERED_MUD_BRICK_SLAB.get(), PLASTERED_MUD_BRICK_STAIRS.get(),
                         PLASTERED_MUD_BRICK_WALL.get(), DECORATED_PLASTERED_MUD_BRICKS.get(), ORNAMENTED_PLASTERED_MUD_BRICK.get(), ORNAMENTED_GOLD_BLOCK.get(),
-                        BYZANTINE_MOSAIC.get(), BYZANTINE_FRESCO.get(), LIGHT_BLUE_CONCRETE_BRICKS.get(), LIGHT_BLUE_CHISELED_CONCRETE.get());
+                        BYZANTINE_MOSAIC.get(), BYZANTINE_FRESCO.get(), LIGHT_BLUE_CONCRETE_BRICKS.get(), LIGHT_BLUE_CHISELED_CONCRETE.get(),
+                        WHITE_STAINED_GLASS_WINDOWS.get(), YELLOW_STAINED_GLASS_WINDOWS.get(), YELLOW_AND_RED_STAINED_GLASS_WINDOWS.get(), RED_AND_BLUE_STAINED_GLASS_WINDOWS.get(),
+                        GREEN_AND_BLUE_STAINED_GLASS_WINDOWS.get());
 
         tag(BlockTags.WALLS)
                 .add(PLASTERED_MUD_BRICK_WALL.get());

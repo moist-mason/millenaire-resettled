@@ -3,6 +3,7 @@ package com.github.moistmason.millenaire.world.item.group;
 import com.github.moistmason.millenaire.world.block.MillenaireBlocks;
 import com.github.moistmason.millenaire.world.item.MillenaireItems;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -11,6 +12,8 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.function.Supplier;
+
+import static com.github.moistmason.millenaire.MillenaireResettled.MOD_ID;
 
 public class MillenaireCreativeTabBuilders {
     public static CreativeModeTab.Builder BLOCK_TAB_BUILDER = CreativeModeTab.builder()
@@ -24,6 +27,7 @@ public class MillenaireCreativeTabBuilders {
 
     //TODO change icon to gold coin when added!
     public static CreativeModeTab.Builder ITEM_TAB_BUILDER = CreativeModeTab.builder()
+            .withTabsBefore(ResourceLocation.fromNamespaceAndPath(MOD_ID, "millenaire_blocks"))
             .icon(itemStack(MillenaireItems.LIME_DUST)) // change to gold when added!
             .title(Component.translatable("itemGroup.millenaire.millenaire_items"))
             .displayItems((itemDisplayParameters, output) -> {

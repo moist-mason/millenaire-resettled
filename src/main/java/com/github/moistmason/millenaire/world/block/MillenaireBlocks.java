@@ -24,11 +24,11 @@ public class MillenaireBlocks {
     /** Wood decorations **/
     public static final DeferredBlock<Block> PLAIN_TIMBER_FRAME = register("plain_timber_frame", supply(OAK_PLANKS, MapColor.COLOR_BROWN)); // 4096/0
     public static final DeferredBlock<Block> CROSS_TIMBER_FRAME = register("cross_timber_frame", supply(OAK_PLANKS, MapColor.COLOR_BROWN)); // 4096/1
-    public static final DeferredBlock<SlabBlock> TIMBER_FRAME_SLAB = register("timber_frame_slab", supply(SlabBlock::new, OAK_SLAB.properties(), MapColor.COLOR_BROWN)); // 4181
-    public static final DeferredBlock<StairBlock> TIMBER_FRAME_STAIRS = register("timber_frame_stairs", supplyStairs(StairBlock::new, PLAIN_TIMBER_FRAME, OAK_STAIRS.properties(), MapColor.COLOR_BROWN)); // 4186
-    public static final DeferredBlock<RotatedPillarBlock> THATCH = register("thatch", supply(RotatedPillarBlock::new, HAY_BLOCK.properties(), MapColor.COLOR_BROWN));
-    public static final DeferredBlock<SlabBlock> THATCH_SLAB = register("thatch_slab", supply(SlabBlock::new, HAY_BLOCK.properties(), MapColor.COLOR_BROWN));
-    public static final DeferredBlock<StairBlock> THATCH_STAIRS = register("thatch_stairs", supplyStairs(StairBlock::new, THATCH, HAY_BLOCK.properties(), MapColor.COLOR_BROWN));
+    public static final DeferredBlock<SlabBlock> TIMBER_FRAME_SLAB = register("timber_frame_slab", supply(SlabBlock::new, OAK_SLAB, MapColor.COLOR_BROWN)); // 4181
+    public static final DeferredBlock<StairBlock> TIMBER_FRAME_STAIRS = register("timber_frame_stairs", supplyStairs(StairBlock::new, PLAIN_TIMBER_FRAME)); // 4186
+    public static final DeferredBlock<RotatedPillarBlock> THATCH = register("thatch", supply(RotatedPillarBlock::new, HAY_BLOCK, MapColor.COLOR_BROWN));
+    public static final DeferredBlock<SlabBlock> THATCH_SLAB = register("thatch_slab", supply(SlabBlock::new, HAY_BLOCK, MapColor.COLOR_BROWN));
+    public static final DeferredBlock<StairBlock> THATCH_STAIRS = register("thatch_stairs", supplyStairs(StairBlock::new, THATCH));
 
     /** Stone decorations **/
     public static final DeferredBlock<Block> PLASTERED_MUD = register("plastered_mud", supply(PACKED_MUD, MapColor.TERRACOTTA_WHITE));
@@ -48,6 +48,14 @@ public class MillenaireBlocks {
     public static final DeferredBlock<SlabBlock> DIRT_SLAB = register("dirt_slab", supply(SlabBlock::new, DIRT.properties()));
     public static final DeferredBlock<Block> DIRT_WALL = register("dirt_wall", supply(DIRT));
     public static final DeferredBlock<FarmSlabBlock> DIRT_PATH_SLAB = register("dirt_path_slab", supply(FarmSlabBlock::new, DIRT_PATH.properties()));
+
+    /** Fancy window panes **/
+    public static final DeferredBlock<IronBarsBlock> WHITE_STAINED_GLASS_WINDOWS = register("white_stained_glass_windows", supply(IronBarsBlock::new, GLASS_PANE));
+    public static final DeferredBlock<IronBarsBlock> YELLOW_STAINED_GLASS_WINDOWS = register("yellow_stained_glass_windows", supply(IronBarsBlock::new, GLASS_PANE));
+    public static final DeferredBlock<IronBarsBlock> YELLOW_AND_RED_STAINED_GLASS_WINDOWS = register("yellow_and_red_stained_glass_windows", supply(IronBarsBlock::new, GLASS_PANE));
+    public static final DeferredBlock<IronBarsBlock> RED_AND_BLUE_STAINED_GLASS_WINDOWS = register("red_and_blue_stained_glass_windows", supply(IronBarsBlock::new, GLASS_PANE));
+    public static final DeferredBlock<IronBarsBlock> GREEN_AND_BLUE_STAINED_GLASS_WINDOWS = register("green_and_blue_stained_glass_windows", supply(IronBarsBlock::new, GLASS_PANE));
+
 
     static {
 

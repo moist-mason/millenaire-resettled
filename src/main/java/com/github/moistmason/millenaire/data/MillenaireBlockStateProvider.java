@@ -4,7 +4,11 @@ import com.github.moistmason.library.data.LibraryBlockStateProvider;
 import com.github.moistmason.millenaire.world.block.DecoratedBrickBlock;
 import com.github.moistmason.millenaire.world.block.PaintedBrickSet;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
@@ -51,6 +55,13 @@ public class MillenaireBlockStateProvider extends LibraryBlockStateProvider {
             wallBlock(set.getWallBlock(), modBlock(set.getColorName() + "_painted_bricks"));
             decoratedBrickBlock(set.getDecoratedBlock(), set.getColorName(), set.getSecondaryColorName());
         }
+
+        transparentPaneBlock(WHITE_STAINED_GLASS_WINDOWS, modBlock("white_stained_glass_windows"), modBlock("white_stained_glass_windows"));
+        transparentPaneBlock(YELLOW_STAINED_GLASS_WINDOWS, modBlock("yellow_stained_glass_windows"), modBlock("yellow_stained_glass_windows"));
+        transparentPaneBlock(YELLOW_AND_RED_STAINED_GLASS_WINDOWS, modBlock("yellow_and_red_stained_glass_windows"), modBlock("yellow_and_red_stained_glass_windows"));
+        transparentPaneBlock(RED_AND_BLUE_STAINED_GLASS_WINDOWS, modBlock("red_and_blue_stained_glass_windows"), modBlock("red_and_blue_stained_glass_windows"));
+        transparentPaneBlock(GREEN_AND_BLUE_STAINED_GLASS_WINDOWS, modBlock("green_and_blue_stained_glass_windows"), modBlock("green_and_blue_stained_glass_windows"));
+
     }
 
     private void decoratedBrickBlock(DeferredBlock<DecoratedBrickBlock> block, String color, String secondaryColor) {
